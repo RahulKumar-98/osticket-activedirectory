@@ -205,31 +205,42 @@ Once open, click the top left blank page icon to create a new script. Hit Ctrl +
 
 </p>
 <p>
-Now we will test the above by creating multiple users and attempting to log into client-1's VM with their credentials. First we will jump back to DC-1 and open up "Powershell ISE" as an administrator (in Windows search box, type Powershell ISE -> right click and run as admin).
-</p>
+Now we will paste the following <a href="https://github.com/joshmadakor1/AD_PS/blob/master/Generate-Names-Create-Users.ps1">script. </p> <p> This will allow us to generate multiple accounts in the organizational unit "_EMPLOYEES".</p>
+
 <br />
 <p>
 <img width="828" height="679" alt="19" src="https://github.com/user-attachments/assets/f10ac3c0-ce4e-4afc-8d3c-4e66db19da32" />
 
 </p>
 <p>
-Now we will test the above by creating multiple users and attempting to log into client-1's VM with their credentials. First we will jump back to DC-1 and open up "Powershell ISE" as an administrator (in Windows search box, type Powershell ISE -> right click and run as admin).
+To create the users in the "_EMPLOYEES" organizational unit, press run, or the play button located on the top of the Powershell window. To verify the employee accounts being created, go back to Active Directory Users and Computers and click on the "_EMPLOYEES" folder. You will see new user accounts being created here. 
 </p>
 <br />
 <p>
-<img width="828" height="679" alt="19" src="https://github.com/user-attachments/assets/f10ac3c0-ce4e-4afc-8d3c-4e66db19da32" />
+<img width="598" height="377" alt="image" src="https://github.com/user-attachments/assets/66b2d51b-ba1b-4fe8-af21-3e673b68a0c3" />
 
 </p>
 <p>
-Now we will test the above by creating multiple users and attempting to log into client-1's VM with their credentials. First we will jump back to DC-1 and open up "Powershell ISE" as an administrator (in Windows search box, type Powershell ISE -> right click and run as admin).
+Here, we will use "bif.cod" as a domain user and log in using this account name onto Client-1 to test account creation and connectivity to Active Directory.
 </p>
 <br />
 <p>
-<img width="828" height="679" alt="19" src="https://github.com/user-attachments/assets/f10ac3c0-ce4e-4afc-8d3c-4e66db19da32" />
+<img width="451" height="549" alt="23" src="https://github.com/user-attachments/assets/d61d0ad4-ff37-439f-8955-036b55987044" />
+
 
 </p>
 <p>
-Now we will test the above by creating multiple users and attempting to log into client-1's VM with their credentials. First we will jump back to DC-1 and open up "Powershell ISE" as an administrator (in Windows search box, type Powershell ISE -> right click and run as admin).
+To verify an account has been successfully enabled for remote log in to our client-1 VM, we will log in as "bif.cod"
+</p>
+<br />
+<p>
+
+
+<img width="1548" height="942" alt="24" src="https://github.com/user-attachments/assets/f31818f8-deb6-4989-8485-ebc888810465" />
+
+</p>
+<p>
+We are now officially signed onto client-1's virtual machine as a user we had generated using the script. This user will only have priveledges listed under Domain User's security group in active directory. We have now concluded our procedure on active directory in Azure.
 </p>
 <br />
 
